@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Card</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- START SCREEN -->
+<div id="startScreen">
+  <div id="card">
+    <div id="cuteIcon">^‿^</div>
+    <h2>Happy Valentine's Day, My Love!</h2>
+    <p>(,,> ◡ <,,)</p>
+    <button id="proceedBtn" onclick="proceed()">PROCEED</button>
+  </div>
+</div>
+
+<!-- PASSWORD SCREEN -->
+<div id="passwordScreen">
+  <h2>Enter password</h2>
+  <input type="password" id="password" placeholder="Type here...">
+  <br><br>
+  <button id="enterBtn" onclick="checkPassword()">Enter</button>
+</div>
+
+<!-- QUESTION SCREEN -->
+<div id="question">
+  <h2 id="questionText">Can you be my Valentine?</h2>
+  <div id="buttonRow">
+    <button id="yesBtn" onclick="yesClicked()">Yes</button>
+    <button id="noBtn" onclick="noClicked()">No</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

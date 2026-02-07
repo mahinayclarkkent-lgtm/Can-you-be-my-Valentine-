@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #ffe6f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  transition: background 1s;
+}
+
+/* START SCREEN CARD */
+#startScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#card {
+  background: #fff;
+  border: 2px solid #ff99cc;
+  border-radius: 20px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#cuteIcon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+#card h2 {
+  color: #ff3399;
+  margin-bottom: 10px;
+}
+
+#card p {
+  color: #ff66b3;
+  margin-bottom: 20px;
+}
+
+#proceedBtn {
+  background: #ff99cc;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#proceedBtn:hover {
+  transform: scale(1.05);
+}
+
+/* PASSWORD SCREEN */
+#passwordScreen {
+  display: none;
+  text-align: center;
+}
+
+#passwordScreen input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ff99cc;
+  margin-bottom: 15px;
+}
+
+#passwordScreen button {
+  background: #ff99cc;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#passwordScreen button:hover {
+  transform: scale(1.05);
+}
+
+/* QUESTION SCREEN */
+#question {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  position: relative;
+}
+
+#yesBtn, #noBtn {
+  background: #ff99cc;
+  border-radius: 15px;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+#yesBtn:hover, #noBtn:hover {
+  transform: scale(1.1);
+  background: #ff66b3;
+}
+
+/* END SCREEN */
+#endScreen {
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pulsing ending text */
+#endScreen h1 {
+  color: #ff3399;
+  font-size: 50px;
+  animation: pulse 1s infinite;
+  margin-top: 40vh;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Heart styling */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: float infinite linear;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -10px;
+  left: 0;
+}
+
+.heart:after {
+  left: 10px;
+  top: 0;
+}
+
+/* Float animation with random speed */
+@keyframes float {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-700px) scale(0.8); opacity: 0; }
+}
